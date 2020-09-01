@@ -2,20 +2,20 @@
 class Armada < Formula
   desc "A multi-cluster batch queuing system for high-throughput workloads on Kubernetes."
   homepage "https://armadaproject.io/"
-  version "0.1.14"
+  version "0.1.15"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/stackedsax/armada/releases/download/v0.1.14/armada_0.1.14_Darwin_x86_64.tar.gz"
-    sha256 "436e6f9b224d1ed5bbc4663e90e35ecd7f84331a21869cd4593d036970cd4647"
+    url "https://github.com/stackedsax/armada/releases/download/v0.1.15/armada_0.1.15_Darwin_x86_64.tar.gz"
+    sha256 "64e1648b511ae4fcae57bcbed6af956a72f8cf19db7d4fbe0d51e6a7a1657eb4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/stackedsax/armada/releases/download/v0.1.14/armada_0.1.14_Linux_x86_64.tar.gz"
-      sha256 "19f240b3fd617954413250641a5be941784565c0c0c382e7f994f4d021d862af"
+      url "https://github.com/stackedsax/armada/releases/download/v0.1.15/armada_0.1.15_Linux_x86_64.tar.gz"
+      sha256 "0a9557670774aaf41ab666580c8ebbd86da3d27740639ce5dd46958048712cd9"
     end
   end
 
   def install
-    bin.install "armada"
+    bin.install "armadactl"
   end
 end
